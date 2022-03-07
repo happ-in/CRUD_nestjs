@@ -1,14 +1,13 @@
-import {Entity, Column, PrimaryGeneratedColumn, Index, PrimaryGeneratedColumn} from 'typeorm';
+import {Column, Entity, PrimaryGeneratedColumn} from 'typeorm';
 
-@Entity()
-@Index('user_id')
-export class User {
-    @PrimaryGeneratedColumn()
+@Entity('User')
+export class UserEntity {
+    @PrimaryGeneratedColumn
     userId: number;
 
     @Column()
-    username: String;
+    username: string;
 
     @Column()
-    password: String;
+    password: string;
 }
